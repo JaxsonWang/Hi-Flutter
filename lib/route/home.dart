@@ -18,7 +18,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    final List<String> tabs = <String>['卡片', '弹窗', '挂件'];
+    final List<String> tabs = <String>['风格', '弹窗', '布局'];
 
     final List<Widget> widget = <Widget>[
       new Cards(),
@@ -27,7 +27,7 @@ class _MyHomePageState extends State<MyHomePage> {
     ];
 
     return TabbedScaffold(
-      title: 'Flutter Demo',
+      title: '功能展示',
       tabs: tabs,
       widgets: widget,
     );

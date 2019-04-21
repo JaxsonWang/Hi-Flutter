@@ -15,7 +15,7 @@ class _MyHomePageState extends State<Cards> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              'Cards',
+              'Cards内容',
             ),
           ],
         ),

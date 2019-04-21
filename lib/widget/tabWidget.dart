@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/widget/drawerWidget.dart';
 
 class TabbedScaffold extends StatelessWidget {
   TabbedScaffold({this.title, this.tabs, this.actions, this.widgets});
@@ -10,23 +11,24 @@ class TabbedScaffold extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return new DefaultTabController(
+    return DefaultTabController(
       length: widgets.length,
-      child: new Scaffold(
-        appBar: new AppBar(
-          title: new Text(title),
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text(title),
           actions: (actions ?? null),
-          bottom: new TabBar(
+          bottom: TabBar(
             isScrollable: false,
-            tabs: tabs.map((String s) => new Tab(text: s)).toList(),
+            tabs: tabs.map((String s) => Tab(text: s)).toList(),
           ),
         ),
-        body: new TabBarView(
+        drawer: DrawerWidget(),
+        body: TabBarView(
           children: widgets.map((Widget widget) {
-            return new SafeArea(
+            return SafeArea(
               top: false,
               bottom: false,
-              child: new Padding(
+              child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: widget,
               ),

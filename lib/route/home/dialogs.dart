@@ -15,7 +15,7 @@ class _MyHomePageState extends State<Dialogs> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              'Dialogs',
+              'Dialogs内容',
             ),
           ],
         ),
