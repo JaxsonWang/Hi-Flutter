@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/route/home/layouts/layouts.dart';
+import 'package:flutter_app/route/home/layouts/StateFullWidgetDemo.dart';
+import 'package:flutter_app/route/home/layouts/StateFulltDemo.dart';
 
 class Widgets extends StatefulWidget {
   @override
@@ -14,7 +15,7 @@ class _MyHomePageState extends State<Widgets> {
         children: <Widget>[
           ListTile(
             leading: Icon(Icons.aspect_ratio),
-            title: Text('布局1'),
+            title: Text('StateFullWidget 状态切换实例展示'),
             onTap: () {
 //            print('执行点击事件！');
 //              // Find the Scaffold in the Widget tree and use it to show a SnackBar!
@@ -24,13 +25,20 @@ class _MyHomePageState extends State<Widgets> {
               // 路由跳转
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => new Layouts()),
+                MaterialPageRoute(builder: (context) => new StateFullWidgetDemo()),
               );
             },
           ),
           ListTile(
             leading: Icon(Icons.aspect_ratio),
-            title: Text('布局2'),
+            title: Text('StatefulWidget 状态管理实例展示'),
+            onTap: () {
+              // 路由跳转
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => new StateFulltDemo()),
+              );
+            },
           ),
           ListTile(
             leading: Icon(Icons.aspect_ratio),
