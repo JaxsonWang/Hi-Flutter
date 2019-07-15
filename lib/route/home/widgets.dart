@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/route/home/layouts/StateFullWidgetDemo.dart';
 import 'package:flutter_app/route/home/layouts/StateFulltDemo.dart';
+import 'package:flutter_app/route/home/layouts/QRCodeScanDemo.dart';
 
 class Widgets extends StatefulWidget {
   @override
@@ -42,7 +43,14 @@ class _MyHomePageState extends State<Widgets> {
           ),
           ListTile(
             leading: Icon(Icons.aspect_ratio),
-            title: Text('布局3'),
+            title: Text('扫一扫'),
+            onTap: () {
+              // 路由跳转
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => new QRCodeScanDemo()),
+              );
+            },
           ),
         ],
       ),
